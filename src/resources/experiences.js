@@ -1,7 +1,7 @@
 export const experiences = [
   {
     _id: "1",
-    company: "AI Research Center for Community Development",
+    company: "CSPC - AI Research Center for Community Development",
     title: "Device Developer",
     period: "2025-2025 (3 months)",
     description:
