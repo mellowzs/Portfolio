@@ -56,7 +56,6 @@ export const projects = [
     ],
     link: "https://github.com/mellowzs/Demons_Maze",
   },
-
   {
     _id: 4,
     title: "Philhealth",
@@ -79,5 +78,21 @@ export const projects = [
       "Bootstrap",
     ],
     link: "https://mellowzs.github.io/philhealth-proj/",
+  },
+    {
+    _id: 4,
+    title: "QR Code Generator",
+    description:
+      "This Python project is a QR Code Generator desktop app built with CustomTkinter that lets users easily create QR codes from URLs or plain text, with the option to embed a logo at the center for personalization. The app features a modern, scrollable interface with live logo preview, error handling, and simple controls for generating and saving QR codes as PNG files. Users can input links such as Google Maps or social media pages, select a logo for branding, and save high-quality QR codes directly to their device. It combines CustomTkinter for a polished UI, and Pillow for image handling, making it a lightweight yet powerful tool for creating customized QR codes.",
+    images: [
+      require("../QR Generator/1.png"),
+    ],
+    technologies: [
+      "Python",
+      "Tkinter",
+      "CustomTkinter",
+      "PIL",
+    ],
+    link: "https://github.com/mellowzs/QR-generator",
   },
 ];
