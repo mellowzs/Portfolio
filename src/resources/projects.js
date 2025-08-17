@@ -12,7 +12,7 @@ export const projects = [
       require("../Portfolio pics/5.png"),
     ],
     technologies: ["React", "Tailwind CSS", "JavaScript", "HTML", "CSS"],
-    link: "/",
+    link: "https://github.com/mellowzs/Portfolio",
   },
 
   {
