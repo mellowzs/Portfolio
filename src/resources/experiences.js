@@ -9,23 +9,9 @@ export const experiences = [
   },
   {
     _id: "2",
-    company: "Sample 1",
-    title: "Full Stack Developer",
-    period: "2024-2025 (1 year)",
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    company: "Queue Lynx Drug Testing Center",
+    title: "ASC",
+    period: "2022 - Present",
+    description: "Since 2022, I have been working as an Authorized Specimen Collector (ASC) at Queue Lynx Drug Testing Laboratory in Iriga City, where I provide front desk support and manage client logs. My responsibilities include maintaining PC workstations, performing basic hardware and software troubleshooting, conducting minor network and printer setups, and ensuring accurate data management with secure handling of digital records.",
   },
-  {
-    _id: "3",
-    company: "Sample 2",
-    title: "Game Developer",
-    period: "2023-2024 (1 year)",
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  },
-  {
-    _id: "4",
-    company: "Sample 3",
-    title: "Web Developer",
-    period: "2022-2023 (1 year)",
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  },
-];
+]
