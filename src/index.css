@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0A192F; /* dark background */
+}
+
+.embla {
+  max-width: 48rem;
+  margin: auto;
+  --slide-height: 19rem;
+  --slide-spacing: 1rem;
+  --slide-size: 100%;
+}
+.embla__viewport {
+  overflow:hidden;
+}
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+  border-radius: 10%;
+}
+.embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+}
+.embla__slide__number {
+  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+  border-radius: 1.8rem;
+  font-size: 4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--slide-height);
+  user-select: none;
+}
+.embla__controls {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: space-between;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+.embla__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Modern Embla Button Styles */
+.embla__button {
+  background: rgba(19, 94, 76, 0.15); /* subtle glassy green */
+  box-shadow: 0 3px 8px rgba(10, 25, 47, 0.12), 0 0 0 4px #135e4c82;
+  border-radius: 100%;
+  color: #1de9b6; /* tertiary accent */
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+  border: none;
+  outline: none;
+}
+
+.embla__button svg {
+  width: 1.2rem;   /* bigger arrow */
+  height: 1.2rem;
+  stroke-width: 4; /* make arrow lines thicker */
+}
+
+.embla__button:hover,
+.embla__button:focus {
+  background: rgba(19, 94, 76, 0.35);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(10, 25, 47, 0.18), 0 0 0 2px #1de9b6;
+}
+
+.embla__button:disabled {
+  color: #135e4c82;
+  background: rgba(19, 94, 76, 0.08);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.embla__dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
+}
+
+/* Modern Embla Dot Styles */
+.embla__dot {
+  background: rgba(10, 25, 47, 0.15);
+  border-radius: 50%;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 0 0.3rem;
+  border: 2px solid #135e4c82;
+  transition: background 0.2s, border-color 0.2s;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.embla__dot:after {
+  content: '';
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: #135e4c82;
+  transition: background 0.2s;
+}
+
+.embla__dot--selected {
+  border-color: #1de9b6;
+  background: rgba(19, 94, 76, 0.35);
+}
+
+.embla__dot--selected:after {
+  background: #1de9b6;
+}
+
+/* Embla Slide Image Container */
+.embla__slide__image-container {
+  background: rgba(19, 94, 76, 0.10); /* subtle glassy green overlay */
+  border: 2px solid #0A192F; /* tertiary accent border */
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px rgba(10, 25, 47, 0.12);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* adjust as needed */
+  width: 100%;
+  margin: auto;
+}
+
+/* Optional: Style images inside the container */
+.embla__slide__image-container img {
+  border-radius: 1rem;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(10, 25, 47, 0.10);
+}
