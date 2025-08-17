@@ -3,7 +3,7 @@ import { Facebook, Github, Linkedin, Mail, Phone } from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="w-full py-6 mt-12 text-center text-white text-sm bg-gray-900">
+    <footer className="w-full py-6 mt-12 text-center text-white text-sm">
       <div>
         &copy; {new Date().getFullYear()} Mel Portfolio. All rights reserved.
       </div>
@@ -13,9 +13,9 @@ function Footer() {
       </div>
 
       {/* Social Links */}
-      <div className="flex justify-center gap-6 mt-4">
+      <div className="flex flex-row justify-center gap-6 mt-4">
         <a
-          href="https://facebook.com/yourprofile"
+          href="https://www.facebook.com/SHYzy.Melu"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-tertiary transition"
@@ -23,7 +23,7 @@ function Footer() {
           <Facebook size={20} />
         </a>
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/mellowzs"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-tertiary transition"
@@ -31,22 +31,21 @@ function Footer() {
           <Github size={20} />
         </a>
         <a
-          href="https://linkedin.com/in/yourprofile"
+          href="https://www.linkedin.com/in/mel-portz81/"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-tertiary transition"
         >
           <Linkedin size={20} />
         </a>
-        <a
-          href="mailto:yourmail@gmail.com"
-          className="hover:text-tertiary transition"
-        >
-          <Mail size={20} />
-        </a>
-        <a href="tel:+639123456789" className="hover:text-tertiary transition">
-          <Phone size={20} />
-        </a>
+
+      {/* Contact Info */}
+        <p className="flex items-center justify-center gap-2 hover:text-tertiary transition">
+          <Mail size={18} /> melportanova@gmail.com
+        </p>
+        <p className="flex items-center justify-center gap-2 hover:text-tertiary transition">
+          <Phone size={18} /> +63 947 457 8813 / +63 915 323 5631
+        </p>
       </div>
     </footer>
   );

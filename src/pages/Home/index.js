@@ -44,12 +44,13 @@ function Home() {
           <Experiences />
           <Projects />
           <Courses />
+        </div>
+        <div className="">
           <Footer />
         </div>
       </div>
     </div>
   );
 }
-
 
 export default Home;
