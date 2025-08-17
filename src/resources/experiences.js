@@ -14,33 +14,4 @@ export const experiences = [
     period: "2022 - Present",
     description: "Since 2022, I have been working as an Authorized Specimen Collector (ASC) at Queue Lynx Drug Testing Laboratory in Iriga City, where I provide front desk support and manage client logs. My responsibilities include maintaining PC workstations, performing basic hardware and software troubleshooting, conducting minor network and printer setups, and ensuring accurate data management with secure handling of digital records .",
   },
-  {
-    _id: "3",
-    company: "Queue Lynx Drug Testing Center",
-    title: "ASC",
-    period: "2022 - Present",
-    description: "Since 2022, I have been working as an Authorized Specimen Collector (ASC) at Queue Lynx Drug Testing Laboratory in Iriga City, where I provide front desk support and manage client logs. My responsibilities include maintaining PC workstations, performing basic hardware and software troubleshooting, conducting minor network and printer setups, and ensuring accurate data management with secure handling of digital records .",
-  },
-    {
-    _id: "4",
-    company: "Queue Lynx Drug Testing Center",
-    title: "ASC",
-    period: "2022 - Present",
-    description: "Since 2022, I have been working as an Authorized Specimen Collector (ASC) at Queue Lynx Drug Testing Laboratory in Iriga City, where I provide front desk support and manage client logs. My responsibilities include maintaining PC workstations, performing basic hardware and software troubleshooting, conducting minor network and printer setups, and ensuring accurate data management with secure handling of digital records .",
-  },
-      {
-    _id: "5",
-    company: "Queue Lynx Drug Testing Center",
-    title: "ASC",
-    period: "2022 - Present",
-    description: "Since 2022, I have been working as an Authorized Specimen Collector (ASC) at Queue Lynx Drug Testing Laboratory in Iriga City, where I provide front desk support and manage client logs. My responsibilities include maintaining PC workstations, performing basic hardware and software troubleshooting, conducting minor network and printer setups, and ensuring accurate data management with secure handling of digital records .",
-  },
-        {
-    _id: "6",
-    company: "Queue Lynx Drug Testing Center",
-    title: "ASC",
-    period: "2022 - Present",
-    description: "Since 2022, I have been working as an Authorized Specimen Collector (ASC) at Queue Lynx Drug Testing Laboratory in Iriga City, where I provide front desk support and manage client logs. My responsibilities include maintaining PC workstations, performing basic hardware and software troubleshooting, conducting minor network and printer setups, and ensuring accurate data management with secure handling of digital records .",
-  },
-  
 ]
