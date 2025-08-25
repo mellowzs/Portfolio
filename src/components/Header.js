@@ -2,7 +2,7 @@ import React from "react";
 
 function Header() {
   return (
-    <div className=" sticky top-0 z-50 bg-transparent backdrop-blur-lg shadow-lg border-b-2 border-white/20">
+    <div className="sticky top-0 z-50 bg-transparent backdrop-blur-lg shadow-lg border-b-2 border-white/20">
       <div className="p-2 flex">
         {/* Logo/Brand */}
         <div className="flex ml-5 sm:text-base text-4xl justify-start">
@@ -12,28 +12,28 @@ function Header() {
           <h1 className="text-tertiary font-semibold">P</h1>
         </div>
         {/* Navbar */}
-        <nav className="flex ml-auto gap-2 text-xl sm:text-xs sm:gap-1">
+        <nav className="flex px-5 py-1 ml-auto gap-7 text-xl sm:text-xs sm:gap-1">
           <a
             href="#about"
-            className="text-white font-medium hover:text-secondary rounded transition-colors duration-300 px-3 py-1"
+            className="text-white font-medium hover:text-secondary border-secondary hover:border-b-2 whitespace-nowrap transition-all duration-300 hover:-mb-[8px]"
           >
             About
           </a>
           <a
             href="#experiences"
-            className="text-white font-medium hover:text-secondary rounded transition-colors duration-300  px-3 py-1"
+            className="text-white font-medium hover:text-secondary border-secondary hover:border-b-secondary-2 whitespace-nowrap transition-all duration-300 hover:-mb-[8px]"
           >
             Experiences
           </a>
           <a
             href="#projects"
-            className="text-white font-medium hover:text-secondary rounded transition-colors duration-300 px-3 py-1"
+            className="text-white font-medium hover:text-secondary border-secondary hover:border-b-2 whitespace-nowrap transition-all duration-500 hover:-mb-[8px]"
           >
             Projects
           </a>
           <a
             href="#courses"
-            className="text-white font-medium hover:text-secondary rounded transition-colors duration-300 px-3 py-1"
+            className="text-white font-medium hover:text-secondary border-secondary hover:border-b-2 whitespace-nowrap transition-all duration-500 hover:-mb-[8px]"
           >
             Courses
           </a>
