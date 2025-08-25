@@ -21,7 +21,7 @@ function Header() {
           </a>
           <a
             href="#experiences"
-            className="text-white font-medium hover:text-secondary border-secondary hover:border-b-secondary-2 whitespace-nowrap transition-all duration-300 hover:-mb-[8px]"
+            className="text-white font-medium hover:text-secondary border-secondary hover:border-b-2 whitespace-nowrap transition-all duration-300 hover:-mb-[8px]"
           >
             Experiences
           </a>
