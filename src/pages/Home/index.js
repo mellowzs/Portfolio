@@ -13,9 +13,9 @@ function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const maxScroll = 400;
+      const maxScroll = 600;
       const scroll = Math.min(window.scrollY, maxScroll);
-      const opacity = (scroll / maxScroll) * 0.2;
+      const opacity = (scroll / maxScroll) * 1;
       setGradientOpacity(opacity);
     };
     window.addEventListener("scroll", handleScroll);
@@ -28,7 +28,7 @@ function Home() {
       <Header />
 
       {/* Hero Section with Vanta + Intro */}
-      <div className="relative w-full h-screen">
+      <div className="w-full h-screen">
         <VantaBackground />
         <Intro />
       </div>
@@ -45,10 +45,8 @@ function Home() {
           <Projects />
           <Courses />
         </div>
-        <div className="">
-          <Footer />
-        </div>
       </div>
+      <Footer />
     </div>
   );
 }

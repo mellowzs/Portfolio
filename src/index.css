@@ -153,7 +153,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%; /* adjust as needed */
+  height: 300px; /* adjust as needed */
   width: 100%;
   margin: auto;
 }

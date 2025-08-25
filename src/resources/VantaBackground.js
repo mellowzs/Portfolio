@@ -55,7 +55,7 @@ const VantaBackground = () => {
   }, [vantaEffect]);
 
   return (
-    <div className="w-full h-screen overflow-hidden">
+    <div className="fixed w-full h-screen overflow-hidden">
       {/* Vanta effect */}
       <div ref={vantaRef} className="top-0 left-0 w-full h-full" />
 
@@ -64,7 +64,7 @@ const VantaBackground = () => {
         className="fixed top-0 left-0 w-full h-full pointer-events-none"
         style={{
           background: "linear-gradient(to top, #0A192F 10%, #135e4c 100%)",
-          opacity: 0.5,
+          opacity: 0.6,
         }}
       />
     </div>

@@ -17,7 +17,7 @@ function Courses() {
     <div id="courses">
       <SectionTitle title="Courses" />
 
-      <div className="flex py-10 gap-10 sm:flex-col">
+      <div className="relative flex py-10 gap-10 sm:flex-col">
         <div className="flex flex-col gap-10 lg:border-l-4 sm:border-b-2 border-[#135e4c82] self-start sm:flex-row sm:overflow-scroll sm:w-full">
           {courses.map((course, index) => (
             <div
