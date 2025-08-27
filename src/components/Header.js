@@ -15,25 +15,25 @@ function Header() {
         <nav className="flex px-5 py-1 ml-auto gap-7 text-xl sm:text-xs sm:gap-1">
           <a
             href="#about"
-            className="text-white font-medium hover:text-secondary border-secondary hover:border-b-2 whitespace-nowrap transition-all duration-300 hover:-mb-[8px]"
+            className="text-white font-medium hover:text-secondary relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:left-0 after:-bottom-1 after:bg-secondary hover:after:w-full after:transition-all after:duration-300"
           >
             About
           </a>
           <a
             href="#experiences"
-            className="text-white font-medium hover:text-secondary border-secondary hover:border-b-2 whitespace-nowrap transition-all duration-300 hover:-mb-[8px]"
+            className="text-white font-medium hover:text-secondary relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:left-0 after:-bottom-1 after:bg-secondary hover:after:w-full after:transition-all after:duration-300"
           >
             Experiences
           </a>
           <a
             href="#projects"
-            className="text-white font-medium hover:text-secondary border-secondary hover:border-b-2 whitespace-nowrap transition-all duration-500 hover:-mb-[8px]"
+            className="text-white font-medium hover:text-secondary relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:left-0 after:-bottom-1 after:bg-secondary hover:after:w-full after:transition-all after:duration-300"
           >
             Projects
           </a>
           <a
             href="#courses"
-            className="text-white font-medium hover:text-secondary border-secondary hover:border-b-2 whitespace-nowrap transition-all duration-500 hover:-mb-[8px]"
+            className="text-white font-medium hover:text-secondary relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:left-0 after:-bottom-1 after:bg-secondary hover:after:w-full after:transition-all after:duration-300"
           >
             Courses
           </a>
