@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Intro() {
+  const navigate = useNavigate();
+
   return (
     <div className="absolute inset-0 flex items-center justify-start z-10">
       <div className="bg-opacity-80 flex flex-col items-start justify-center gap-8 w-3/4 text-justify sm:gap-2 sm:w-full h-full p-8">
@@ -18,8 +21,11 @@ function Intro() {
           robust, scalable solutions. I am always eager to learn new tools and
           frameworks, and I thrive on solving complex problems through code.
         </p>
-        <button className="border-2 border-tertiary text-tertiary px-10 py-3 rounded hover:bg-tertiary hover:text-white transition-colors duration-200 sm:px-3 sm:text-xs sm:mt-6">
-          Get Started
+        <button
+          onClick={() => navigate('/contact')}
+          className="border-2 border-tertiary text-tertiary px-10 py-3 rounded hover:bg-tertiary hover:text-white transition-colors duration-200 sm:px-3 sm:text-xs sm:mt-6"
+        >
+          Get in Touch
         </button>
       </div>
     </div>

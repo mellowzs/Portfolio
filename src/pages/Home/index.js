@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Header from "../../components/Header";
 import Intro from "./Intro";
 import About from "./About";
@@ -9,6 +10,7 @@ import VantaBackground from "../../resources/VantaBackground";
 import Footer from "../../components/Footer";
 
 function Home() {
+  const location = useLocation();
   const [gradientOpacity, setGradientOpacity] = useState(0);
 
   useEffect(() => {
@@ -22,6 +24,13 @@ function Home() {
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const element = document.getElementById(location.state.scrollTo);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
 
   return (
     <div>
