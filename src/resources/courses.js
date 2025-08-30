@@ -5,39 +5,5 @@ export const courses = [
         image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
         alt: "HTML5",
     },
-    {
-        _id: 2,
-        title: "Web Development",
-        description: "Learned the basics of web development including HTML, CSS, JavaScript, and responsive design.",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-        alt: "CSS3",
-    },
-    {
-        _id: 3,
-        title: "JavaScript Algorithms and Data Structures",
-        description: "Covered fundamental algorithms and data structures using JavaScript, including sorting algorithms, linked lists, stacks, queues, and trees.",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-        alt: "JavaScript",
-    },
-    {
-        _id: 4,
-        title: "Front-End Development Libraries",
-        description: "Focused on popular front-end libraries and frameworks such as React, Redux, Bootstrap, and jQuery to build dynamic web applications.",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-        alt: "React",
-    },
-    {
-        _id: 5,
-        title: "Responsive Web Design",
-        description: "Learned techniques for creating responsive web designs that adapt to different screen sizes and devices using CSS media queries and flexible layouts.",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-        alt: "Sass",
-    },
-    {
-        _id: 6,
-        title: "Git and GitHub",
-        description: "Gained proficiency in version control using Git and GitHub for collaborative software development and project management.",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-        alt: "Git",
-    },
+
 ]
