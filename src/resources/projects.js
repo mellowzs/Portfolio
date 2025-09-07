@@ -3,7 +3,7 @@ export const projects = [
     _id: 0,
     title: "Queue Lynx Drug Testing Landing Page",
     description:
-      "This project is a React-based landing page and digital form system developed for Queue Lynx Drug Testing Center. The platform was designed to modernize client intake and reduce manual paperwork by moving the drug test registration process online.",
+      "Queue Lynx is a drug testing center landing page and form system designed to streamline client intake and reduce paperwork. The website allows patients to register online by filling in their personal details, selecting the purpose of their drug test, and providing valid ID information. It includes an auto-calculation of age from birthdate, conditional fields (like specifying “Other” purposes), and a digital signature pad for capturing electronic signatures. Once completed, the system generates a formatted PDF with all user data and a professional layout, ready for printing or submission.",
     images: [
       require("../QLynx/1.png"),
       require("../QLynx/2.png"),
@@ -11,7 +11,15 @@ export const projects = [
       require("../QLynx/4.png"),
       require("../QLynx/5.png"),
     ],
-    technologies: ["React.js", "Tailwind CSS", "JavaScript", "HTML", "CSS", "pdf-lib", "Signature Pad"],
+    technologies: [
+      "React.js",
+      "Tailwind CSS",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "pdf-lib",
+      "Signature Pad",
+    ],
     link: "https://queue-lynx.vercel.app/",
   },
   {
@@ -85,29 +93,16 @@ export const projects = [
       require("../Philhealth/6.png"),
       require("../Philhealth/7.png"),
     ],
-    technologies: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Figma",
-      "Bootstrap",
-    ],
+    technologies: ["HTML", "CSS", "JavaScript", "Figma", "Bootstrap"],
     link: "https://mellowzs.github.io/philhealth-proj/",
   },
-    {
+  {
     _id: 4,
     title: "QR Code Generator",
     description:
       "This Python project is a QR Code Generator desktop app built with CustomTkinter that lets users easily create QR codes from URLs or plain text, with the option to embed a logo at the center for personalization. The app features a modern, scrollable interface with live logo preview, error handling, and simple controls for generating and saving QR codes as PNG files. Users can input links such as Google Maps or social media pages, select a logo for branding, and save high-quality QR codes directly to their device. It combines CustomTkinter for a polished UI, and Pillow for image handling, making it a lightweight yet powerful tool for creating customized QR codes.",
-    images: [
-      require("../QR Generator/1.png"),
-    ],
-    technologies: [
-      "Python",
-      "Tkinter",
-      "CustomTkinter",
-      "PIL",
-    ],
+    images: [require("../QR Generator/1.png")],
+    technologies: ["Python", "Tkinter", "CustomTkinter", "PIL"],
     link: "https://github.com/mellowzs/QR-generator",
   },
 ];
