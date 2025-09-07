@@ -14,7 +14,7 @@ function Courses() {
   };
 
   return (
-    <div id="courses">
+    <div id="courses" className="pb-40">
       <SectionTitle title="Courses" />
 
       <div className="relative flex py-10 gap-10 sm:flex-col">

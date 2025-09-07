@@ -1,7 +1,22 @@
 export const projects = [
   {
+    _id: 0,
+    title: "Queue Lynx Drug Testing Landing Page",
+    description:
+      "This project is a React-based landing page and digital form system developed for Queue Lynx Drug Testing Center. The platform was designed to modernize client intake and reduce manual paperwork by moving the drug test registration process online.",
+    images: [
+      require("../QLynx/1.png"),
+      require("../QLynx/2.png"),
+      require("../QLynx/3.png"),
+      require("../QLynx/4.png"),
+      require("../QLynx/5.png"),
+    ],
+    technologies: ["React.js", "Tailwind CSS", "JavaScript", "HTML", "CSS", "pdf-lib", "Signature Pad"],
+    link: "https://queue-lynx.vercel.app/",
+  },
+  {
     _id: 1,
-    title: "Portfolio Website",
+    title: "Portfolio",
     description:
       "A personal portfolio website showcasing my skills, projects, and experiences. Built with React and Tailwind CSS.",
     images: [
