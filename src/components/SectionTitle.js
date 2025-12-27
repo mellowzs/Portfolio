@@ -27,11 +27,11 @@ function SectionTitle({ title, className = "" }) {
   }, []);
 
   return (
-    <div className={`flex gap-10 items-center py-10 ${className}`}>
-      <h1 className='text-2xl sm:text-lg text-white font-semibold'>{title}</h1>
+    <div className={`flex gap-6 lg:gap-10 items-center ${className}`}>
+      <h1 className='text-2xl lg:text-3xl sm:text-xl text-white font-bold tracking-tight'>{title}</h1>
       <div
         ref={lineRef}
-        className='bg-tertiary transition-all duration-100 rounded'
+        className='bg-tertiary transition-all duration-100 rounded-full shadow-lg shadow-tertiary/30'
         style={{ width: `${width}px`, height: `${height}px` }}
       ></div>
     </div>

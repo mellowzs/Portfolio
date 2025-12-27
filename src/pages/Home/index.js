@@ -43,12 +43,12 @@ function Home() {
       </div>
 
       {/* Rest of the page */}
-      <div className="relative px-6 sm:px-6">
+      <div className="relative px-4 sm:px-6 lg:px-12 xl:px-16">
         <div
           className="absolute inset-0 pointer-events-none bg-gradient-to-b from-[#0A192F] via-[#0A192F] to-[#0A192F] z-0"
           style={{ opacity: gradientOpacity }}
         />
-        <div className="relative z-10">
+        <div className="relative z-10 max-w-7xl mx-auto space-y-0">
           <About />
           <Experiences />
           <Projects />

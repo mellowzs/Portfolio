@@ -1,6 +1,7 @@
 import React, { useState, useRef, useLayoutEffect } from "react";
 import SectionTitle from "../../components/SectionTitle";
 import { experiences } from "../../resources/experiences";
+import ModernDropdown from "../../components/ModernDropdown";
 
 function Experiences() {
   const [selectedItemIndex, setSelectedItemIndex] = useState(0);
@@ -23,29 +24,51 @@ function Experiences() {
   };
 
   return (
-    <div id="experiences">
-      <SectionTitle title="Experience" />
+    <div id="experiences" className="py-12 lg:py-16">
+      <div className="mb-8 lg:mb-12">
+        <SectionTitle title="Experience" />
+      </div>
 
-      <div className="flex py-10 gap-10 sm:flex-col">
-        <div className="flex flex-col gap-10 lg:border-l-2 sm:border-b-2 border-[#135e4c82] self-start sm:flex-row sm:overflow-scroll sm:w-full">
-          {experiences.map((experience, index) => (
-            <div
-              key={index}
-              onClick={() => handleSelect(index)}
-              className="cursor-pointer"
-            >
-              <h1
-                className={`text-xl px-5 sm:text-base sm:w-full whitespace-nowrap transition-all duration-700
-                ${
-                  selectedItemIndex === index
-                    ? "text-tertiary border-tertiary lg:border-l-4 sm:border-b-2 -ml-[3px] bg-[#1a7f5a24] py-4"
-                    : "text-white"
-                }`}
-              >
-                {experience.period}
-              </h1>
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+        {/* Experience selection - Desktop: Left sidebar, Mobile: Dropdown */}
+        <div className="flex-shrink-0 w-full lg:w-auto">
+          <div className="lg:border-l-2 lg:border-[#135e4c82] sm:border-b-2 sm:border-[#135e4c82] sm:pb-6 lg:pl-8">
+            {/* Mobile Dropdown */}
+            <div className="sm:block lg:hidden">
+              <ModernDropdown
+                options={experiences}
+                value={selectedItemIndex}
+                onChange={handleSelect}
+                getOptionLabel={(experience) => experience.period}
+                ariaLabel="Select experience"
+              />
             </div>
-          ))}
+
+            {/* Desktop Sidebar */}
+            <div className="hidden lg:flex flex-col gap-3">
+              {experiences.map((experience, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleSelect(index)}
+                  className={`experience-tab group relative text-left px-4 py-3 rounded-lg transition-all duration-300
+                    ${
+                      selectedItemIndex === index
+                        ? "text-tertiary bg-[#1a7f5a24] border-l-4 border-tertiary shadow-lg shadow-tertiary/20"
+                        : "text-white/70 hover:text-white hover:bg-[#1a7f5a12]"
+                    }`}
+                  aria-label={`Select ${experience.period} experience`}
+                  aria-pressed={selectedItemIndex === index}
+                >
+                  <span className="text-lg font-medium relative z-10">
+                    {experience.period}
+                  </span>
+                  {selectedItemIndex === index && (
+                    <span className="absolute inset-0 bg-gradient-to-r from-tertiary/10 to-transparent rounded-lg"></span>
+                  )}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Animated height wrapper */}
@@ -54,15 +77,15 @@ function Experiences() {
             height,
             transition: "height 0.7s cubic-bezier(0.4, 0, 0.2, 1)",
           }}
-          className="w-1/2 sm:w-full sm:ml-1 ml-32"
+          className="flex-1 min-w-0"
         >
           <div
             ref={contentRef}
             key={fadeKey}
-            className="flex flex-col gap-5 text-justify sm:text-xs"
+            className="flex flex-col gap-4 lg:gap-6 text-justify"
           >
             <h1
-              className="text-secondary text-2xl opacity-0 animate-fadeInLeft"
+              className="text-secondary text-2xl lg:text-3xl font-bold opacity-0 animate-fadeInLeft sm:text-xl"
               style={{
                 animation: "fadeInLeft 0.7s forwards",
                 animationDelay: "0.1s",
@@ -70,35 +93,25 @@ function Experiences() {
             >
               {experiences[selectedItemIndex].title}
             </h1>
-            <h1
-              className="text-tertiary text-1xl opacity-0 animate-fadeInLeft"
+            <h2
+              className="text-tertiary text-xl lg:text-2xl font-semibold opacity-0 animate-fadeInLeft sm:text-lg"
               style={{
                 animation: "fadeInLeft 0.7s forwards",
                 animationDelay: "0.4s",
               }}
             >
               {experiences[selectedItemIndex].company}
-            </h1>
-            <h1
-              className="text-white opacity-0 animate-fadeInLeft"
+            </h2>
+            <p
+              className="text-white text-base lg:text-lg leading-relaxed opacity-0 animate-fadeInLeft sm:text-sm"
               style={{
                 animation: "fadeInLeft 0.7s forwards",
                 animationDelay: "0.7s",
               }}
             >
               {experiences[selectedItemIndex].description}
-            </h1>
+            </p>
           </div>
-        </div>
-
-        <div className="h-[40vh]">
-          <dotlottie-player
-            src="https://lottie.host/ef26e260-9d13-4f42-97d6-0cd94c6ceea5/zKCvefg7GA.lottie"
-            background="transparent"
-            speed="1"
-            autoplay
-            loop
-          ></dotlottie-player>
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@ import React, { useState, useRef, useLayoutEffect } from "react";
 import SectionTitle from "../../components/SectionTitle";
 import { projects } from "../../resources/projects";
 import EmblaCarousel from "../../resources/emblaCarousel";
+import ModernDropdown from "../../components/ModernDropdown";
 
 function Projects() {
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
@@ -26,21 +27,62 @@ function Projects() {
   };
 
   return (
-    <div id="projects" className="py-10">
+    <div id="projects" className="py-12 lg:py-16">
       {/* Section title */}
-      <div className="flex justify-end">
+      <div className="flex justify-end mb-8 lg:mb-12">
         <SectionTitle className="flex flex-row-reverse" title="Projects" />
       </div>
 
-      {/* Responsive grid */}
-      <div className="grid grid-cols-3 gap-10 py-10 md:grid-cols-1 sm:gap-5 item">
-        {/* Selected project */}
+      {/* Responsive layout */}
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+        {/* Project selection - Desktop: Left sidebar, Mobile: Dropdown */}
+        <div className="flex-shrink-0 w-full lg:w-auto">
+          <div className="lg:border-r-2 lg:border-[#135e4c82] sm:border-b-2 sm:border-[#135e4c82] sm:pb-6 lg:pr-8">
+            {/* Mobile Dropdown */}
+            <div className="sm:block lg:hidden">
+              <ModernDropdown
+                options={projects}
+                value={selectedItemIndex}
+                onChange={handleSelect}
+                getOptionLabel={(project) => project.title}
+                ariaLabel="Select project"
+              />
+            </div>
+
+            {/* Desktop Sidebar */}
+            <div className="hidden lg:flex flex-col gap-3">
+              {projects.map((project, index) => (
+                <button
+                  key={project._id}
+                  onClick={() => handleSelect(index)}
+                  className={`project-tab group relative text-left px-4 py-3 rounded-lg transition-all duration-300
+                    ${
+                      selectedItemIndex === index
+                        ? "text-tertiary bg-[#1a7f5a24] border-l-4 border-tertiary shadow-lg shadow-tertiary/20"
+                        : "text-white/70 hover:text-white hover:bg-[#1a7f5a12]"
+                    }`}
+                  aria-label={`Select ${project.title} project`}
+                  aria-pressed={selectedItemIndex === index}
+                >
+                  <span className="text-lg font-medium relative z-10">
+                    {project.title}
+                  </span>
+                  {selectedItemIndex === index && (
+                    <span className="absolute inset-0 bg-gradient-to-r from-tertiary/10 to-transparent rounded-lg"></span>
+                  )}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Selected project content */}
         <div
           key={fadeKey}
-          className="flex flex-col items-end gap-8 w-full sm:w-full sm:text-xs sm:ml-1 row-span-2 col-span-2 sm:col-span-3 sm:row-span-3"
+          className="flex-1 flex flex-col gap-6 lg:gap-8 min-w-0"
         >
           <h1
-            className="text-secondary text-2xl opacity-0 animate-fadeInRight"
+            className="text-secondary text-3xl lg:text-4xl font-bold opacity-0 animate-fadeInRight sm:text-xl"
             style={{
               animation: "fadeInRight 0.7s forwards",
               animationDelay: "0.1s",
@@ -48,8 +90,9 @@ function Projects() {
           >
             {projects[selectedItemIndex].title}
           </h1>
+          
           <div
-            className="w-full max-w-[800px] opacity-0 animate-fadeInRight"
+            className="w-full opacity-0 animate-fadeInRight"
             style={{
               animation: "fadeInRight 0.7s forwards",
               animationDelay: "0.3s",
@@ -62,7 +105,7 @@ function Projects() {
           </div>
 
           <p
-            className="text-white text-justify max-w-[800px] opacity-0 animate-fadeInRight"
+            className="text-white text-justify text-base lg:text-lg leading-relaxed opacity-0 animate-fadeInRight sm:text-sm"
             style={{
               animation: "fadeInRight 0.7s forwards",
               animationDelay: "0.5s",
@@ -70,9 +113,10 @@ function Projects() {
           >
             {projects[selectedItemIndex].description}
           </p>
+          
           <div
             ref={contentRef}
-            className="w-full max-w-[800px] flex flex-wrap gap-2 opacity-0 animate-fadeInRight"
+            className="flex flex-wrap gap-3 opacity-0 animate-fadeInRight items-center"
             style={{
               animation: "fadeInRight 0.7s forwards",
               animationDelay: "0.7s",
@@ -82,7 +126,7 @@ function Projects() {
             {projects[selectedItemIndex].technologies.map((tech, idx) => (
               <span
                 key={idx}
-                className="border border-tertiary text-tertiary px-3 py-1 rounded-full text-sm"
+                className="border-2 border-tertiary text-tertiary px-4 py-2 rounded-full text-sm font-medium bg-transparent hover:bg-[#1a7f5a24] transition-all duration-200 sm:text-xs sm:px-3 sm:py-1"
               >
                 {tech}
               </span>
@@ -93,38 +137,15 @@ function Projects() {
             onClick={() =>
               window.open(projects[selectedItemIndex].link, "_blank")
             }
-            className="max-w-[800px] border-2 border-tertiary text-tertiary px-12 py-3 rounded hover:bg-tertiary hover:text-white transition-colors duration-200 sm:px-3 sm:text-xs sm:mt-6 opacity-0 animate-fadeInRight p-3 w-full sm:text-center"
+            className="self-start border-2 border-tertiary text-tertiary px-8 py-3 rounded-lg hover:bg-tertiary hover:text-primary transition-all duration-300 font-medium shadow-lg shadow-tertiary/20 hover:shadow-tertiary/40 hover:scale-105 active:scale-95 opacity-0 animate-fadeInRight sm:px-6 sm:py-2 sm:text-sm"
             style={{
               animation: "fadeInRight 0.5s forwards",
               animationDelay: "0.8s",
             }}
+            aria-label={`Visit ${projects[selectedItemIndex].title} project`}
           >
-            Link
+            View Project →
           </button>
-        </div>
-
-        {/* Project list */}
-        <div className="flex lg:flex-row-reverse py-5 gap-1 sm:flex-col overflow-x-auto sm:col-span-full">
-          <div className="flex flex-col gap-10 lg:border-r-2 sm:border-b-2 border-[#135e4c82] sm:flex-row overflow-x-auto">
-            {projects.map((project, index) => (
-              <div
-                key={project._id}
-                onClick={() => handleSelect(index)}
-                className="cursor-pointer"
-              >
-                <h1
-                  className={`text-xl px-5 sm:text-base sm:w-full sm:whitespace-nowrap transition-all duration-700
-                  ${
-                    selectedItemIndex === index
-                      ? "text-tertiary border-tertiary lg:border-r-4 sm:border-b-2 -ml-[6px] bg-[#1a7f5a24] py-4"
-                      : "text-white"
-                  }`}
-                >
-                  {project.title}
-                </h1>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </div>

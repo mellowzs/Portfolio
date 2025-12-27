@@ -1,6 +1,66 @@
 export const projects = [
   {
     _id: 0,
+    title: "Sydcommerce",
+    description:
+      "Developed a modern, full-stack ecommerce platform using Next.js, TypeScript, Prisma, and PostgreSQL. The application supports product browsing, cart and wishlist management, secure checkout, and multiple payment gateways including Stripe, PayPal, and local providers. Built an admin dashboard for managing products, orders, customers, and sales analytics. Implemented secure authentication with NextAuth, role-based access control, API protection, and Dockerized deployment for scalable production use.",
+    images: [
+      require("../Sydcommerce/1.png"),
+      require("../Sydcommerce/2.png"),
+      require("../Sydcommerce/3.png"),
+      require("../Sydcommerce/4.png"),
+      require("../Sydcommerce/5.png"),
+      require("../Sydcommerce/6.png"),
+      require("../Sydcommerce/7.png"),
+      require("../Sydcommerce/8.png"),
+      require("../Sydcommerce/9.png"),
+      require("../Sydcommerce/10.png"),
+      require("../Sydcommerce/11.png"),
+      require("../Sydcommerce/12.png"),
+      require("../Sydcommerce/13.png"),
+      require("../Sydcommerce/14.png"),
+      require("../Sydcommerce/15.png"),
+      require("../Sydcommerce/16.png"),
+      require("../Sydcommerce/17.png"),
+      require("../Sydcommerce/18.png"),
+    ],
+    technologies: [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "TypeScript",
+      "Stripe",
+      "PayPal",
+      "Prisma",
+      "PostgreSQL",
+      "Supabase",
+      "Google OAuth",
+      "Google Analytics",
+      "Systeme.io",
+    ],
+    link: "https://sydcommerce.com",
+  },
+  {
+    _id: 1,
+    title: "SYDPOINT",
+    description:
+      "SYD Point POS is a secure, full-featured Point of Sale system built with Next.js, Prisma, PostgreSQL, and Material-UI, designed for small-to-medium retail stores. It features fast barcode-based checkout, inventory tracking, sales processing with multiple payment methods, returns and refunds, and cash drawer management. The system implements role-based access for Admin, Manager, and Cashier users, terminal-bound sessions for device accountability, and comprehensive admin dashboards for managing users, terminals, inventory, and reports. Supabase is integrated for secure handling of product and user images, and the application is built with TypeScript for full type safety. Security features include server-side sessions with HttpOnly cookies, bcrypt password hashing, CSRF protection, rate limiting, and audit logging.",
+    images: [
+      require("../SYDPOINT/1.png"),
+      require("../SYDPOINT/2.png"),
+      require("../SYDPOINT/3.png"),
+      require("../SYDPOINT/4.png"),
+      require("../SYDPOINT/5.png"),
+      require("../SYDPOINT/6.png"),
+      require("../SYDPOINT/7.png"),
+      require("../SYDPOINT/8.png"),
+      require("../SYDPOINT/9.png"),
+    ],
+    technologies: ["React", "Tailwind CSS", "TypeScript", "Next.js", "Prisma", "PostgreSQL", "Supabase", "Material-UI"],
+    link: "https://www.sydpos.biz/",
+  },
+  {
+    _id: 2,
     title: "Queue Lynx Drug Testing Landing Page",
     description:
       "Queue Lynx is a drug testing center landing page and form system designed to streamline client intake and reduce paperwork. The website allows patients to register online by filling in their personal details, selecting the purpose of their drug test, and providing valid ID information. It includes an auto-calculation of age from birthdate, conditional fields (like specifying “Other” purposes), and a digital signature pad for capturing electronic signatures. Once completed, the system generates a formatted PDF with all user data and a professional layout, ready for printing or submission.",
@@ -23,7 +83,7 @@ export const projects = [
     link: "https://queue-lynx.vercel.app/",
   },
   {
-    _id: 1,
+    _id: 3,
     title: "Portfolio",
     description:
       "A personal portfolio website showcasing my skills, projects, and experiences. Built with React and Tailwind CSS.",
@@ -39,7 +99,7 @@ export const projects = [
   },
 
   {
-    _id: 2,
+    _id: 4,
     title: "Employee Task Management System",
     description:
       "The Task Tracker Management System, developed by Group 10 (BSCS-3B), is a software solution designed to enhance task and project management by improving collaboration, organization, and productivity. It supports two user roles—Admin and Employee—each with distinct functionalities. Admins can assign tasks, monitor completion status, manage employee accounts, and track attendance through clock-in and clock-out features. Employees, in turn, can view and update their assigned tasks, record attendance, and participate in real-time communication via a built-in chatroom. The system is built using HTML, JavaScript, PHP, Bootstrap, and MySQL, ensuring a responsive interface and secure data handling. Despite its robust core features, the system lacks advanced reporting and analytics tools, such as customizable reports and graphical performance insights, which limits strategic decision-making capabilities. Nonetheless, the modular architecture allows for future scalability, and thorough testing—including unit, integration, and user acceptance testing—ensures reliability.",
@@ -56,7 +116,7 @@ export const projects = [
     link: "https://etms.free.nf/",
   },
   {
-    _id: 3,
+    _id: 5,
     title: "Demon's Maze",
     description:
       "A Maze game developed in GODOT game engine.The goal of the game is to find the exit to the maze as fast as possible. The quicker the player escapes, the higher the rank in the leaderboard.",
@@ -80,7 +140,7 @@ export const projects = [
     link: "https://github.com/mellowzs/Demons_Maze",
   },
   {
-    _id: 4,
+    _id: 6,
     title: "Philhealth",
     description:
       "This mock-up redesign project for the PhilHealth website focuses on transforming its outdated and conservative interface into a modern, user-friendly platform. The original site, while functional, lacked engaging design elements, accessibility features, and intuitive navigation. The redesign introduces a refreshed homepage with clear links to essential sections like About Us, Downloads, and Online Services, aiming to improve usability for all users, including the elderly. Enhanced visual appeal, simplified layouts, and a more interactive user flow are central to the new design, ensuring a more satisfying and accessible online experience",
@@ -97,7 +157,7 @@ export const projects = [
     link: "https://mellowzs.github.io/philhealth-proj/",
   },
   {
-    _id: 4,
+    _id: 77,
     title: "QR Code Generator",
     description:
       "This Python project is a QR Code Generator desktop app built with CustomTkinter that lets users easily create QR codes from URLs or plain text, with the option to embed a logo at the center for personalization. The app features a modern, scrollable interface with live logo preview, error handling, and simple controls for generating and saving QR codes as PNG files. Users can input links such as Google Maps or social media pages, select a logo for branding, and save high-quality QR codes directly to their device. It combines CustomTkinter for a polished UI, and Pillow for image handling, making it a lightweight yet powerful tool for creating customized QR codes.",
